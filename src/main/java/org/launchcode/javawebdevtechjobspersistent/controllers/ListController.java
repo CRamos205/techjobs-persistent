@@ -1,6 +1,8 @@
 package org.launchcode.javawebdevtechjobspersistent.controllers;
 
+import org.launchcode.javawebdevtechjobspersistent.dataRepos.EmployerRepository;
 import org.launchcode.javawebdevtechjobspersistent.dataRepos.JobRepository;
+import org.launchcode.javawebdevtechjobspersistent.dataRepos.SkillRepository;
 import org.launchcode.javawebdevtechjobspersistent.models.Job;
 import org.launchcode.javawebdevtechjobspersistent.models.JobData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,10 @@ public class ListController {
 
     @Autowired
     private JobRepository jobRepository;
+    @Autowired
+    private SkillRepository skillRepository;
+    @Autowired
+    private EmployerRepository employerRepository;
 
     static HashMap<String, String> columnChoices = new HashMap<>();
 
